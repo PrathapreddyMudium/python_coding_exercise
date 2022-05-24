@@ -1,0 +1,6 @@
+timeStamp,label,responseCode,responseMessage,failureMessage
+2021-02-09 06:01:23 PST,Direct_test_Services_QuoteRequest,504,Gateway Time-out,
+2021-02-09 06:01:23 PST,Internal_Quote_Travel,504,Gateway Timeout,
+2021-02-09 06:01:30 PST,Proxy_test_Services_QuoteRequest,504,Gateway Timeout,
+2021-02-09 06:02:55 PST,Proxy_test_Services_QuoteRequest,504,Gateway Timeout,
+2021-02-09 06:03:04 PST,Internal_Quote_Travel,504,Gateway Timeout,

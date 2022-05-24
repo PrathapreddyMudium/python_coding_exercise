@@ -1,0 +1,74 @@
+{
+    "destination_addresses": [
+        "Washington, DC, USA",
+        "Philadelphia, PA, USA",
+        "Santa Barbara, CA, USA",
+        "Miami, FL, USA",
+        "Austin, TX, USA",
+        "Napa County, CA, USA"
+    ],
+    "origin_addresses": [
+        "New York, NY, USA"
+    ],
+    "rows": [
+        {
+            "elements": [
+                {
+                    "distance": {
+                        "value": 365468
+                    },
+                    "duration": {
+                        "value": 14064
+                    },
+                    "status": "OK"
+                },
+                {
+                    "distance": {
+                        "value": 152193
+                    },
+                    "duration": {
+                        "value": 6227
+                    },
+                    "status": "OK"
+                },
+                {
+                    "distance": {
+                        "value": 4632197
+                    },
+                    "duration": {
+                        "value": 151772
+                    },
+                    "status": "OK"
+                },
+                {
+                    "distance": {
+                        "value": 2069031
+                    },
+                    "duration": {
+                        "value": 67405
+                    },
+                    "status": "OK"
+                },
+                {
+                    "distance": {
+                        "value": 2802972
+                    },
+                    "duration": {
+                        "value": 93070
+                    },
+                    "status": "OK"
+                },
+                {
+                    "distance": {
+                        "value": 4620514
+                    },
+                    "duration": {
+                        "value": 152913
+                    },
+                    "status": "OK"
+                }
+            ]
+        }
+    ],
+    "status": "OK"
+}
