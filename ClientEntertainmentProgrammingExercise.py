@@ -7,7 +7,7 @@ def basket_analysis(filename):
 
     # print(df)
     # 1st Question
-    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Total number of fruit: ---------XXXXXXXXXXXXX")
+    print("XXXXXX===== Total number of fruit: =====XXXXXX")
     df_size = df["size"]
     total_number_of_fruit = 0
     for item in df_size:
@@ -15,17 +15,17 @@ def basket_analysis(filename):
     print("Total number of fruits: " + str(total_number_of_fruit))
 
     # 2nd Question
-    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Types of fruit: ---------XXXXXXXXXXXXX")
+    print("XXXXXX===== Types of fruit: =====XXXXXX")
     df_name = df["name"].unique()
     print("Types of fruit: " + str(df_name.size))
 
     # 3rd Question
-    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- The number of each type of fruit in descending order: ---------XXXXXXXXXXXXX")
+    print("XXXXXX===== The number of each type of fruit in descending order: =====XXXXXX")
     df_size_sort = df.groupby("name").sum().sort_values("size", ascending=False)
     print(df_size_sort.iloc[:, 0:1])
 
     # 4th question
-    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- The characteristics (size, color, shape, etc.) of each fruit by type: ---------XXXXXXXXXXXXX")
+    print('XXXXXX===== The characteristics (size, color, shape, etc.) of each fruit by type: =====XXXXXX')
     df_characterstics = df.groupby(["name", "color", "shape"]).agg({"size": ["sum"]})
     df_characterstics.columns = ["sum"]
     df_characterstics = df_characterstics.reset_index()
@@ -35,7 +35,7 @@ def basket_analysis(filename):
               row["shape"])
 
     # 5th Question
-    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Have any fruit been in the basket for over 3 days: ---------XXXXXXXXXXXXX")
+    print("XXXXXX===== Have any fruit been in the basket for over 3 days: =====XXXXXX")
     df_3days = df.loc[df["days"] > 3]
     df_3days = df_3days.drop_duplicates()
     for index, row in df_3days.iterrows():
