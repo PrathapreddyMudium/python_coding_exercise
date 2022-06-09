@@ -7,21 +7,25 @@ def basket_analysis(filename):
 
     # print(df)
     # 1st Question
+    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Total number of fruit: ---------XXXXXXXXXXXXX")
     df_size = df["size"]
     total_number_of_fruit = 0
     for item in df_size:
         total_number_of_fruit += item
-    print(total_number_of_fruit)
+    print("Total number of fruits: " + str(total_number_of_fruit))
 
     # 2nd Question
+    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Types of fruit: ---------XXXXXXXXXXXXX")
     df_name = df["name"].unique()
-    print(df_name.size)
+    print("Types of fruit: " + str(df_name.size))
 
     # 3rd Question
+    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- The number of each type of fruit in descending order: ---------XXXXXXXXXXXXX")
     df_size_sort = df.groupby("name").sum().sort_values("size", ascending=False)
     print(df_size_sort.iloc[:, 0:1])
 
     # 4th question
+    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- The characteristics (size, color, shape, etc.) of each fruit by type: ---------XXXXXXXXXXXXX")
     df_characterstics = df.groupby(["name", "color", "shape"]).agg({"size": ["sum"]})
     df_characterstics.columns = ["sum"]
     df_characterstics = df_characterstics.reset_index()
@@ -31,10 +35,11 @@ def basket_analysis(filename):
               row["shape"])
 
     # 5th Question
+    print("xxxxxxxxxxxxxxxxxxxxxxxxx--- Have any fruit been in the basket for over 3 days: ---------XXXXXXXXXXXXX")
     df_3days = df.loc[df["days"] > 3]
     df_3days = df_3days.drop_duplicates()
     for index, row in df_3days.iterrows():
-        print(str(row["size"])+" "+row["color"]+" "+row["shape"] + " "+row["name"] + " are "+str(row["days"]) + "days "
+        print(str(row["size"])+" "+row["color"]+" "+row["shape"] + " "+row["name"] + " are "+str(row["days"]) + " days "
                                                                                                                 "old")
     # for item2 in df_3days
 
